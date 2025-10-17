@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pothole Reporter</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>🕳️ Pothole Reporting System</h1>
+  <p id="status">✅ Backend running successfully!</p>
+  
+  <div class="form-container">
+    <h2>Report a Pothole</h2>
+    <form id="reportForm" enctype="multipart/form-data">
+      <label for="location">📍 Location:</label><br>
+      <input type="text" id="location" name="location" required><br><br>
+
+      <label for="description">📝 Description:</label><br>
+      <textarea id="description" name="description" required></textarea><br><br>
+
+      <label for="photo">📷 Photo (take a picture or upload):</label><br>
+      <input type="file" id="photo" name="photo" accept="image/*" capture="environment"><br><br>
+
+      <!-- Hidden GPS fields (auto-filled) -->
+      <input type="hidden" id="latitude" name="latitude">
+      <input type="hidden" id="longitude" name="longitude">
+
+      <button type="submit">Submit Report</button>
+    </form>
+    <p id="message"></p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
